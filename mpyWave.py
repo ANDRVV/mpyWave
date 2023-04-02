@@ -100,7 +100,7 @@ class Wave():
                     except:
                         continue
 
-    def overflow(self, timeout : int = NO_TIMEOUT, Bit : int = 1):
+    def overflow(self, timeout : int = NO_TIMEOUT, Bit : str = "1"):
         if self.pinMode == RX:
             self.pin = Pin(self.intPin, Pin.OUT)
             self.pinMode = TX
