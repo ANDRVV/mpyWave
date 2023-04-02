@@ -77,7 +77,7 @@ class Wave():
             self.pinMode = RX
         bits = ""
         while True:
-            if len(bits) >= 24:
+            if len(bits) >= length:
                 return bits
             else:
                 try:
