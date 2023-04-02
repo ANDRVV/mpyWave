@@ -84,7 +84,7 @@ class Wave():
                     if self.pin.value() != 1:
                         raise Exception()
                     self.setDelay(PULSE_HIGH_BIT00 * self.protocol[0] / DELAY_OPERATOR)
-                    if self.pin.low() != 0:
+                    if self.pin.value() != 0:
                         raise Exception()
                     self.setDelay(PULSE_LOW_BIT00 * self.protocol[0] / DELAY_OPERATOR)
                     bits += "0"
@@ -93,7 +93,7 @@ class Wave():
                         if self.pin.value() != 1:
                             raise Exception()
                         self.setDelay(PULSE_HIGH_BIT01 * self.protocol[0] / DELAY_OPERATOR)
-                        if self.pin.low() != 0:
+                        if self.pin.value() != 0:
                             raise Exception()
                         self.setDelay(PULSE_LOW_BIT01 * self.protocol[0] / DELAY_OPERATOR)
                         bits += "1"
