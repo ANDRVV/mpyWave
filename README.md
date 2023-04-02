@@ -17,5 +17,5 @@ wave.sendWaves("011100010101110100001010111010000101000")
 
 wave.overflow("1") # It sends waves compulsively
 
-print(recvWaves(length = 8))
+print(wave.recvWaves(length = 8))
 ```
