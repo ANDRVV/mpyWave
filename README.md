@@ -1,14 +1,13 @@
 # What is mpyWave?
 
 mpyWave is an opensource library that serves to send bits and receive them from a pin, fully compatible with all hardwares.
-It is especially recommended if the hardware is a radio wave transmitter or receiver.
 ![Waves](https://raw.githubusercontent.com/ANDRVV/mpyWave/main/26855362.jpg)
 
 # Examples
 ```python
 import mpyWave
 
-wave = mpyWave.Wave(protocol = 1, pin = 16)
+wave = mpyWave.Wave(UARTid = 0, rxPin = 17, txPin = 16)
 
 wave.sendWave("0")
 wave.sendWave("1")
