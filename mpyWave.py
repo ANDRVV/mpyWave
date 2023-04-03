@@ -124,9 +124,44 @@ class Wave():
         self.setDelay((SYNC_HIGH * self.protocol[0]) / DELAY_OPERATOR)
         self.pin.low()
         self.setDelay((SYNC_LOW * self.protocol[0]) / DELAY_OPERATOR)
+    
+    def getValidBits(self, bits : str, counter : int = 3):
+        maxCount = counter - 1
+        maxEscape = round(maxCount / 2)
+        chunks = []
+        for i in range(1, len(bits), 8):
+            chunks.append(bits[i:i + 8])
+        if len(chunks) < 1:
+            return None
+        finalstring = ""
+        for chunk in chunks:
+            if len(chunk) < (maxCount * 2):
+                finalstring += chunk
+                continue
+            escape = 0
+            counter = 1
+            charwork = ""
+            valid = True 
+            for char in chunk:
+                if str(chunk).index(char) == 0:
+                    charwork = char
+                    continue
+                if charwork == char:
+                    counter += 1
+                else:
+                    if counter >= maxCount:
+                        escape += 1
+                    charwork = char
+                    counter = 1
+                if escape >= maxEscape:
+                    valid = False
+            if valid:
+                finalstring += chunk
+        if finalstring == "":
+            return None
+        return finalstring
 
     def setDelay(self, delay):
         end = time.time() + delay - (delay / 100)
         while time.time() < end:
             time.sleep(delay / 100)
-    
