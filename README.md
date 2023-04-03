@@ -17,5 +17,5 @@ wave.sendWaves("011100010101110100001010111010000101000")
 
 wave.overflow("1") # It sends waves compulsively
 
-print(wave.recvWaves(validateBits(length = 40)))
+print(mpyWave.getValidBits(wave.recvWaves(length = 40)))
 ```
