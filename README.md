@@ -1,6 +1,6 @@
 # What is mpyWave?
 
-mpyWave is an opensource library that serves to send bits and receive them from a pin, fully compatible with all hardwares.
+mpyWave is an opensource library that serves to send bits and receive them from a pin for RF, fully compatible with all hardwares.
 ![Waves](https://raw.githubusercontent.com/ANDRVV/mpyWave/main/26855362.jpg)
 
 # Examples
