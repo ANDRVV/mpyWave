@@ -26,7 +26,6 @@ class Wave():
         self.protocol = PROTOCOLS[protocol]
 
     def sendWave(self, bit : str):
-        bit = format(bit, '#0{}b'.format(len(bit) + 2))[2:]
         if self.pinMode == RX:
             self.pin = Pin(self.intPin, Pin.OUT)
             self.pinMode = TX
@@ -45,7 +44,6 @@ class Wave():
         self.setDelay(LowPulse / DELAY_OPERATOR)
 
     def sendWaves(self, bits : str):
-        bits = format(bit, '#0{}b'.format(len(bit) + 2))[2:]
         if self.pinMode == RX:
             self.pin = Pin(self.intPin, Pin.OUT)
             self.pinMode = TX
