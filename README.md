@@ -7,7 +7,7 @@ mpyWave is an opensource library that serves to send bits and receive them from 
 ```python
 import mpyWave
 
-wave = mpyWave.Wave(UARTid = 0, rxPin = 17, txPin = 16)
+wave = mpyWave.Wave(protocol = 1, pin = 16)
 
 wave.sendWave("0")
 wave.sendWave("1")
