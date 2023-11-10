@@ -4,7 +4,9 @@
 
 <h3 align="center">Examples</h3>
 
-```
+<div align="center" style="display:grid;place-items:center;">
+  
+```python
 import mpyWave
 
 wave = mpyWave.Wave(protocol = 1, pin = 16)
@@ -18,3 +20,4 @@ wave.overflow("1") # It sends waves compulsively
 
 print(mpyWave.getValidBits(wave.recvWaves(length = 40)))
 ```
+</div>
