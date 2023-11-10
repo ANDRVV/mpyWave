@@ -1,10 +1,10 @@
-# What is mpyWave?
+<h1 align="center">What is mpyWave?</h1>p>
 
-mpyWave is an opensource library that serves to send bits and receive them from a pin for RF, fully compatible with all hardwares.
-![Waves](https://raw.githubusercontent.com/ANDRVV/mpyWave/main/26855362.jpg)
+<p align="center">mpyWave is an opensource library that serves to send bits and receive them from a pin for RF, fully compatible with all hardwares.</p>
 
-# Examples
-```python
+<h3 align="center">Examples</h3>
+
+```
 import mpyWave
 
 wave = mpyWave.Wave(protocol = 1, pin = 16)
