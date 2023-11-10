@@ -1,4 +1,4 @@
-<h1 align="center">What is mpyWave?</h1>p>
+<h1 align="center">What is mpyWave?</h1>
 
 <p align="center">mpyWave is an opensource library that serves to send bits and receive them from a pin for RF, fully compatible with all hardwares.</p>
 
