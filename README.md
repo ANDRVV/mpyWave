@@ -2,10 +2,8 @@
 
 <p align="center">mpyWave is an opensource library that serves to send bits and receive them from a pin for RF, fully compatible with all hardwares.</p>
 
-<h3 align="center">Examples</h3>
+<h3 align="center">Example</h3>
 
-<div align="center" style="display:grid;place-items:center;">
-  
 ```python
 import mpyWave
 
@@ -20,4 +18,4 @@ wave.overflow("1") # It sends waves compulsively
 
 print(mpyWave.getValidBits(wave.recvWaves(length = 40)))
 ```
-</div>
+
